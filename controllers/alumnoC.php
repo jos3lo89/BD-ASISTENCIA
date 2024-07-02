@@ -1,5 +1,6 @@
 <?php
 
+
 class AlumnoC
 {
   public $alumnoM;
@@ -26,6 +27,21 @@ class AlumnoC
         echo "Registro exitoso";
       } else {
         echo "Error al registrar";
+      }
+    }
+  }
+
+
+  public function loginAlumnoC()
+  {
+    if (isset($_POST["nombre"])) {
+      $dato = $_POST["nombre"];
+      SessionManager::setSessionData("datito", $dato);
+      $resultadito = $this->alumnoM->login();
+      if ($resultadito) {
+        echo "coincide";
+      } else {
+        echo "no coincide";
       }
     }
   }

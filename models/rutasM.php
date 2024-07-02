@@ -7,7 +7,8 @@ class RutasM
   {
     if (
       $rutas == "inicio" ||
-      $rutas == "registrar"
+      $rutas == "registrar" ||
+      $rutas == "login" 
       // aqui agregar mas rutas y opciones
     ) {
       $direccion = "views/content/" . $rutas . ".php";

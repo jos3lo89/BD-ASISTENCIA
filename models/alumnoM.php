@@ -28,4 +28,25 @@ class AlumnoM extends ConexionDB
     $stmt->close();
     return false;
   }
+
+
+  public function login()
+  {
+
+    $conn = $this->conexion();
+    $sql = "select  * from estudiante;";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+      $fila = $result->fetch_array(MYSQLI_ASSOC);
+      $nombre = SessionManager::getSessionData("datito");
+      while ($fila = $result->fetch_array(MYSQLI_ASSOC)) {
+        if ($fila["nombre"] == $nombre) {
+          $conn->close();
+          return true;
+        }
+      }
+    }
+    $conn->close();
+    return false;
+  }
 }

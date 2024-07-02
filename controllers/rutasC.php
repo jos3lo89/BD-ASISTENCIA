@@ -20,7 +20,5 @@ class RutasC
     return $direccionUrl;
   }
 
-
-
   // aqui mas metodos para preteger las rutas 
 }

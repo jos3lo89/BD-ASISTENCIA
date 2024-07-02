@@ -7,6 +7,7 @@
     <ul>
       <li><a href="index.php?ruta=inicio">Inicio</a></li>
       <li><a href="index.php?ruta=registrar">Registrar</a></li>
+      <li><a href="index.php?ruta=login">login</a></li>
     </ul>
   </nav>
 
